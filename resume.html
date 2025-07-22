@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    
+    <main class="content">
+       
+        <section class="leftContent">
+            <br><br>
+            <div id="image">
+                <img id="userPhoto" src=""></p>
+            </div>
+            
+
+
+
+
+
+
+
+
+            <h3>Details</h3>
+            <ul>
+                <li id="address1"></li>
+                <li id="phone1"></li>
+                <li id="email"></li>
+            </ul><br>
+
+            <h3>Skills</h3>
+            <ul id="skills">
+                <!-- Filled by JS -->
+            </ul><br>
+
+            <h3>Language</h3>
+            <ul id="langs"></ul><br>
+
+            <h3>Hobby</h3>
+            <ul id="hobby-list">
+
+            </ul>
+
+
+        </section>
+
+
+
+        <section class="rightContent">
+            <br><br>
+            <h1 id="name"></h1>
+            <ul id="headList">
+                <li id="status"></li>
+                <li id="address2"></li>
+                <li id="phone2"></li>
+            </ul><br>
+
+
+
+
+            <h3>PROFILE</h3>
+            <p id="description"></p>
+            <br>
+
+
+
+
+
+
+            <h3>Education</h3>
+            <div id="education"></div><br>
+
+            <h3>Extra Activities</h3>
+            <div id="activities"></div><br>
+
+            <h3>Work Experience</h3>
+            <div id="work"></div><br>
+            
+
+            
+        </section>
+    </main>
+
+
+
+
+
+    <button id="download" onclick="downloadPageAsImage()">Download Page as Image</button>
+
+
+    
+    <script src="resume.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        function downloadPageAsImage() {
+            html2canvas(document.body).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'webpage.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+    </script>
+
+
+</body>
+
+
+</html>

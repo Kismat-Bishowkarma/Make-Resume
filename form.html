@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form id="resume" action="resume.html" method="get">
+        
+      
+      <div class="detail">
+        <span>
+        <!--Detail Section-->
+          
+          <h3 id="heading">Enter Your Details</h3>
+
+          <label for="fullName">Full Name: </label><br>
+          <input type="text" id="fullName" name="fullName" placeholder="Kismat Bishowkarma" required><br>
+
+          <label for="status">Status: </label><br>
+          <input type="text" id="status" name="status" placeholder="eg. Software Developer" required><br>
+
+          <label for="address">Address: </label><br>
+          <input type="text" id="address" name="address" placeholder="eg. Bharatpur Chitwan" required><br>
+
+          <label for="phone">Phone: </label><br>
+          <input type="text" id="phone" name="phone" placeholder="eg. 9812345678" required><br>
+
+          <label for="email">Email: </label><br>
+          <input type="email" id="email" name="email" placeholder="eg. abcd@gmail.com" required><br>
+
+          <label for="description">Describe Yourself: </label><br>
+          <input type="text" id="description" name="description" placeholder="eg. I am a BIT student at Tribhuvan University" required><br>
+          </span>
+        </div>
+
+            <br><br>
+        
+        <div class="image">
+          <div class="imgInput">
+            <h3 id="heading">Upload Your Photo</h3>
+            <label>Photo: <input type="file" id="photo" accept="image/*" required></label>
+          </div>
+        </div>
+        
+        <br><br>
+
+        <div class="skill">
+          <span>
+          <!--Skill Section-->
+          <h3 id="heading">Select Your Skills</h3><br>
+          <label><input type="checkbox" name="skill" value="HTML"> HTML</label><br>
+          <label><input type="checkbox" name="skill" value="CSS"> CSS</label><br>
+          <label><input type="checkbox" name="skill" value="JavaScript"> JavaScript</label><br>
+          <label><input type="checkbox" name="skill" value="Java"> Java</label><br>
+          <label><input type="checkbox" name="skill" value="React.JS"> React.JS</label><br>
+          <label><input type="checkbox" name="skill" value="Node.JS"> Node.JS</label><br>
+          <label><input type="checkbox" name="skill" value="Python"> Python</label><br>
+          <label><input type="checkbox" name="skill" value="php"> php</label><br>
+          <label><input type="checkbox" name="skill" value="mySql"> mySql</label><br>
+          <label><input type="checkbox" name="skill" value="Git/Github"> Git/Github</label><br><br>
+          </span>
+        </div>
+        
+
+        <br><br>
+
+        <div class="lang">
+          <span>
+          <!--Language Section-->
+          <h3 id="heading">Select Language You Know</h3>
+          <label><input type="checkbox" name="lang" value="Nepali"> Nepali</label><br>
+          <label><input type="checkbox" name="lang" value="English"> English</label><br>
+          <label><input type="checkbox" name="lang" value="Hindi"> Hindi</label><br>
+          <label><input type="checkbox" name="lang" value="Sanskrit"> Sanskrit</label><br>
+          <label><input type="checkbox" name="lang" value="Urdu"> Urdu</label><br>
+          <label><input type="checkbox" name="lang" value="Korean"> Korean</label><br>
+          <label><input type="checkbox" name="lang" value="Japanese"> Japanese</label><br>
+          <label><input type="checkbox" name="lang" value="Chinese"> Chinese</label><br>
+          <label><input type="checkbox" name="lang" value="mySql"> mySql</label><br>
+          <label><input type="checkbox" name="lang" value="Spanish"> Spanish</label><br><br>
+          </span>
+        </div>
+
+        <br><br>
+
+        <div class="hobby">
+          <span>
+          <!--Hobby Section-->
+          <div id="hobbies-container">
+              <h3 id="heading">Hobbies:</h3><br>
+              <input id="hobbyInput" type="text" name="hobbies" placeholder="Enter a hobby" required><br>
+          </div>
+          <button type="button" onclick="addHobby()">Add More Hobby</button><br><br>
+          </span>
+        </div>
+
+        <br><br>
+
+
+      <!-- Education -->
+    <div class="section">
+      <span>
+      <h3 id="heading">Education</h3>
+      <div id="edu-container">
+        <div class="entry">
+          <label>School/College: <br><input type="text" id="eduInput" name="eduTitle[]" required></label><br>
+          <label>Level:<br><textarea id="eduInput" name="eduDesc[]"  required></textarea></label>
+        </div>
+      </div>
+      <button type="button" onclick="addEdu()">Add Education</button>
+      </span>
+    </div>
+
+    <br><br>
+
+    <!-- Extra Activities -->
+    <div class="section">
+      <span>
+      <h3 id="heading">Extra Activities</h3>
+      <div id="activity-container">
+        <div class="entry">
+          <label>Activity: <br><input type="text" id="extraInput" name="actTitle[]" required></label><br>
+          <label>Time Period:<br><textarea id="extraInput" name="actDesc[]"  required></textarea></label>
+        </div>
+      </div>
+      <button type="button" onclick="addActivity()">Add Activity</button>
+      </span>
+    </div>
+
+    <br><br>
+
+    <!-- Work Experience -->
+    <div class="section">
+      <span>
+      <h3 id="heading">Work Experience</h3>
+      <div id="work-container">
+        <div class="entry">
+          <label>Job Title: <br><input type="text" id="workInput" name="jobTitle[]" required></label><br>
+          <label>Description:<br><textarea id="workInput" name="jobDesc[]" required></textarea></label>
+        </div>
+      </div>
+      <button type="button" onclick="addWork()">Add Work</button>
+      </span>
+    </div>
+
+    <br>
+    
+        <input id="submit" type="submit" value="Submit">
+    </form>
+    
+
+
+
+
+
+    <script src="form.js"></script>
+</body>
+</html>
